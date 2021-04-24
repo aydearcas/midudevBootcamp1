@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import PrintDateMsg from './PrintDate.js';
+import Message from './Message.js';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Todo lo que hay aquí adentro es JSX, no HTML
+    // Esto de abajo se llama fragment y permite no insertar elementos html
+    <>
+      <h1> Titulo de la APP </h1>
+        <strong> Estamos trabajando en ello </strong>
+      <div className="date">
+        <PrintDateMsg />
+        <Message message='Espero que pases un buen dia' color='green' />
+        <Message message='Especialmente porque hoy es un dia especial' color='blue' />
+      </div>
+    </>
   );
 }
 
